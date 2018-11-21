@@ -2,12 +2,6 @@
   Variables
 ==================================== */
 
-// Media Breakpoints
-$desktop: new-breakpoint(min-width 1025px 12);
-$tablet: new-breakpoint(min-width 768px max-width 1024px 12);
-$phone: new-breakpoint(min-width 320px max-width 767px 12);
-
-
 
 // Typography
 @import "fonts";
@@ -19,10 +13,6 @@ $phone: new-breakpoint(min-width 320px max-width 767px 12);
 $base-font-family: $Lato;
 $heading-font-family: $Montserrat;
 
-// $modularscale: (
-//   base: 1em,
-//   ratio: 1.25
-// );
 
 // Font Sizes
 $base-font-size: 1em;

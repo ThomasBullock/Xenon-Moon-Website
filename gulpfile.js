@@ -35,7 +35,7 @@ gulp.task("minifyScripts", ["transpile"], function(){
 	return gulp.src("js/app.js")
 		.pipe(uglify().on('error', function(e){
 		            console.log(e);
-		         }))
+		}))
 		.pipe(rename('app.min.js'))
 		.pipe(gulp.dest('js'));
 });
