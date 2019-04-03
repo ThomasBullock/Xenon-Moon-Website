@@ -1,7 +1,7 @@
 $large-desktop-grid: (
   columns: 12,
   gutter: $base-spacing,
-  media: 1200px,
+  media: "screen and (min-width: 1025px)",
   color: rgba(#00d4ff, 0.25),
   direction: ltr,
 );
@@ -9,7 +9,7 @@ $large-desktop-grid: (
 $desktop-grid: (
   columns: 12,
   gutter: $base-spacing,
-  media: 1024px,
+  media: "screen and (max-width: 1024px)",
   color: rgba(#00d4ff, 0.25),
   direction: ltr,
 );
@@ -17,7 +17,7 @@ $desktop-grid: (
 $tablet-grid: (
   columns: 6,
   gutter: $base-spacing,
-  media: 768px,
+  media: "screen and (max-width: 992px)", //768px,
   color: rgba(#00d4ff, 0.25),
   direction: ltr,
 );
@@ -25,7 +25,7 @@ $tablet-grid: (
 $mobile-grid: (
   columns: 3,
   gutter: $base-spacing,
-  media: 767px,
+  media: "screen and (max-width: 767px)", // 320px,
   color: rgba(#00d4ff, 0.25),
   direction: ltr,
 );

@@ -23,9 +23,11 @@
     "gulp-uglify": "^2.0.0"
   },
   "dependencies": {
+    "barba.js": "^1.0.0",
     "bourbon": "^5.1.0",
     "bourbon-neat": "^2.1.0",
     "del": "^2.2.2",
-    "normalize-scss": "^7.0.0"
+    "normalize-scss": "^7.0.0",
+    "velocity-animate": "^2.0.5"
   }
 }

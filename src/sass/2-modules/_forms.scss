@@ -1,0 +1,36 @@
+
+form {
+  @include drop-shadow(2);
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: $base-spacing;
+  border-radius: $base-border-radius;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include grid-media($large-desktop-grid) {
+    width: 600px;
+  }  
+
+  @include grid-media($desktop-grid) {
+    width: 600px;
+  }  
+
+  @include grid-media($tablet-grid) {
+    width: 600px;
+  }
+
+  @include grid-media($mobile-grid) {
+    width: 90%;
+  }
+}
+
+.input-field {
+  flex: 1 1 100%;
+}
+
+.input-field--half {
+  flex: 0 1 47.5%;
+}
