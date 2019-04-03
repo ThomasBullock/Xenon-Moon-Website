@@ -1,9 +1,18 @@
 # Gulp Build System #
-Starter Template For Bourbon Neat using Gulp
+This repo uses Gulp to handle js/sass in development
 
-Technologies used
+Required Tech for local dev
 
- [Bourbon](http://bourbon.io/)/[Neat](http://neat.bourbon.io/) 
+## Node 
+```
+node --version
+```
+
+## Gulp
+```
+npm install --global gulp-cli
+```
+
 
 ## Notes
 
@@ -12,11 +21,11 @@ Download and run NPM install.
 ### npm run server ###
 local server on port 8888
 ### gulp watchFiles ###
-compiles Sass with autoprefixer and concatenates js scripts
-### gulp build ###
-compiles Sass with autoprefixer and minifies css - concatenates transpiles from es6 and minifies js and outputs project 
-to dist folder
+Compiles Sass with autoprefixer and concatenates js scripts 
+When developing locally run gulp watchFiles this will detect changes in src folder and output changes to parent directory
 
+### gulp build ### 
+compiles Sass with autoprefixer and minifies css - concatenates transpiles from es6 and minifies js and outputs finished project to dist folder
 
 
 ## Folder Structure
