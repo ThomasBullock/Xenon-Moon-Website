@@ -1,7 +1,3 @@
-// Breakpoints
-$medium-screen: 600px;
-$large-screen: 900px;
-
 // Typography
 $base-font-family: $font-stack-system;
 $heading-font-family: $base-font-family;
@@ -12,7 +8,7 @@ $heading-line-height: 1.2;
 
 // Other Sizes
 $base-border-radius: 3px;
-$base-spacing: $base-line-height * 1em;
+$base-spacing: 1rem; //$base-line-height * 1em;
 $small-spacing: $base-spacing / 2;
 $base-z-index: 0;
 
@@ -22,9 +18,55 @@ $dark-gray: #333;
 $medium-gray: #999;
 $light-gray: #ddd;
 
+$white         : #FFFFFF !default;
+$ghost         : #FAFAFA !default;
+$snow          : #F9F9F9 !default;
+$vapor         : #F6F6F6 !default;
+$white-smoke   : #F5F5F5 !default;
+$silver        : #EFEFEF !default;
+$smoke         : #EEEEEE !default;
+$gainsboro     : #DDDDDD !default;
+$iron          : #CCCCCC !default;
+$base          : #AAAAAA !default;
+$aluminum      : #999999 !default;
+$jumbo         : #888888 !default;
+$monsoon       : #777777 !default;
+$steel         : #666666 !default;
+$charcoal      : #555555 !default;
+$tuatara       : #444444 !default;
+$oil           : #333333 !default;
+$jet           : #222222 !default;
+$ebony         : #111111 !default;
+$black         : #000000 !default;
+
+$facebook-blue     : #3b5998;
+$bandcamp-blue     : #629aa9;
+$flickr            : #f40083;
+$twitter-blue      : #1da1f2;
+$skype-blue        : #00aff0;      
+$soundcloud-orange : #ff8800;
+$spotify-green     : #2ebd59;
+$snapchat-yellow   : #fffc00;
+$youtube-red       : #cd201f;
+$tumblr-grey       : #35465c;
+$song-kick         : #f80046;
+$vimeo             : #45bbff;
+
+$instagram-blue    : #405de6;
+$instagram-purple  : #833ab4;
+$instagram-orange  : #fcaf45;
+$instagram-yellow  : #ffdc80;
+
+$aqua-blue: #00aeef;
+$lcd-blue: #0076EF;
+$artic-sea: rgba(47, 66, 113, 0.9);
+$laser-yellow: #F9F004;
+$sun-yellow: #FDD000;
+
+
 // Font Colors
 $base-font-color: $dark-gray;
-$action-color: $blue;
+$action-color: $aqua-blue;
 
 // Border
 $base-border-color: $light-gray;
@@ -43,3 +85,32 @@ $focus-outline-offset: 2px;
 // Animations
 $base-duration: 150ms;
 $base-timing: ease;
+
+// Grid
+
+// Breakpoints
+$mobile-screen: 600px;
+$mobile-screen-up: 601px !default;
+$tablet-screen: 900px;
+$tablet-screen-up: 993px !default;
+$laptop-screen: 1200px;
+$laptop-screen-up: 1201x !default;
+
+
+$grid--tablet-up: (
+  columns: 12,
+  gutter: 1rem,
+  media: "(min-width: #{$mobile-screen-up})",
+);
+
+$grid--laptop-up: (
+  columns: 12,
+  gutter: 1rem,
+  media: "(min-width: #{$tablet-screen-up})",
+);
+
+$grid--desktop-up: (
+  columns: 12,
+  gutter: 1rem,
+  media: "(min-width: #{$laptop-screen-up})",
+);

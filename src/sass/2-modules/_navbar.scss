@@ -1,0 +1,59 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    background: $artic-sea;
+    border-bottom: 1px solid $aqua-blue;
+    box-shadow: inset 0px -50px 32px -48px rgb(0, 118, 239);
+    // height: 80px;
+}
+
+.navbar__wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $base-spacing;
+}
+
+
+.navbar__brand {
+    width: 120px;
+    margin: 0;
+    margin-bottom: -2px;  // offset logo dropshadow
+    a {
+      img {
+        @include img-responsive() 
+      }
+    }
+}
+
+.navbar__menu {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.navbar__menu-item {
+    color: $laser-yellow ;
+    margin-left: $small-spacing;
+    border-bottom: solid 1px transparent;
+    margin-bottom: -1px;    
+
+    &--first {
+        margin-left: 0
+    }
+
+    &:hover {
+        color: $sun-yellow;
+        &.active {
+            border-bottom-color: $sun-yellow !important;
+        }
+    }
+
+    &.active {
+        border-bottom: solid 1px $laser-yellow;
+    }
+}

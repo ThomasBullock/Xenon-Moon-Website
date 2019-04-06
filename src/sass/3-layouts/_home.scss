@@ -9,39 +9,21 @@ body {
 //   @include container(80%, $base-spacing);
 // } 
 
-.navbar {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 1030;
-  background: $artic-sea;
-  border-bottom: 1px solid $aqua-blue;
-  box-shadow: inset 0px -50px 32px -48px rgb(0, 118, 239);
-  height: 80px;
-}
-
 
 
 
 main {
   background: $jet;
-  height: 100vh;
+  // height: 100vh;
+  width: 100%;
 } 
 
 
-.brand {
-  width: 150px;
-  a {
-    img {
-      @include img-responsive() 
-    }
-  }
-}
-
-.home {
+.hero {
   position: relative;
-  height: 100vh;
+  height: calc(100vh - 68px);
+
+
 }
 
 .content {
@@ -64,13 +46,19 @@ main {
 
   }
 
-  @include elem('heading') {
+  &__heading {
     @include img-responsive();
 
   }
 
-  @include elem('img-container') {
-    @include position(absolute, null null $base-spacing $base-spacing);
+  &__img-container {
+    @include position(absolute, null 0 $base-spacing * 2 0);
+    width: 80%;
+    margin: 0 auto;    
+
+    @include grid-media($grid--tablet-up) {
+      @include position(absolute, null null $base-spacing * 2 $base-spacing * 2);
+    }
 
     img {
       @include img-responsive;
@@ -80,13 +68,23 @@ main {
 
 .btn {
   background: transparentize( $aqua-blue, .75);
-  border: solid 2px transparentize( $aqua-blue, .20);
-  box-shadow: 0 2px 2px transparentize( $aqua-blue, .20);
+  border: solid 2px transparentize( $aqua-blue, .25);
+  // box-shadow: 0 2px 2px transparentize( $aqua-blue, .20);
   border-radius: $base-border-radius;
   color: $laser-yellow;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  &:hover {
+    background: transparentize( $aqua-blue, .65);
+    color: $sun-yellow;
+    border: solid 2px $aqua-blue;
+
+    svg {
+      fill: $sun-yellow;
+    }
+  }
 
   @include elem('icon') {
     padding-top: 2px;
@@ -127,6 +125,7 @@ main {
     width: 100%;
     text-align: center;
     color: $laser-yellow;
+    margin-bottom: $base-spacing;
   }
 
 
@@ -143,6 +142,16 @@ main {
     a:first-child {
       margin-right: $base-spacing;
     }
+
+    svg {
+      width: 120px;
+      height: auto;
+
+      @include grid-media($grid--tablet-up) {
+        width: 160px;
+      }
+    }
+    
   }
 
   @include elem('gallery') {
@@ -155,12 +164,16 @@ main {
 
   @include elem('gallery-thumb') {
     margin-top: $base-spacing;
-    flex: 0 1 48.5%;
+    flex: 0 1 100%;
+
+    @include grid-media($grid--tablet-up) {
+      flex: 0 1 48.5%;
+    }
 
     > h4 {
       color: $laser-yellow;
       font-weight: 400;
-      margin-bottom: $base-spacing / 4;
+      // margin-bottom: $smallbase-spacing;
     }
   }
 }
@@ -172,11 +185,20 @@ main {
 .panel {
   position: relative;
   padding: $base-spacing;
-  width: 700px;
+  width: 100%;
   margin: 0 auto;
   background: transparentize($oil, .5);
   height: 100%;
   z-index: 100;
+
+  @include grid-media($grid--tablet-up) {
+    width: 90%;
+  }
+
+  @include grid-media($grid--laptop-up) {
+    width: 80%;
+    max-width: 1000px;
+  }
 }
 
 .floating-action {
@@ -193,11 +215,25 @@ main {
 }
 
 .stars {
-  @include absolute-full();
+  // @include absolute-full();
   // background-image: url('http://www.script-tutorials.com/demos/360/images/stars.png');
   background:#000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;  
+  padding-bottom: 4rem;
+  
   // background-size: cover;
   z-index: 0;
+  // height: 2000px;
+  // @include grid-media($grid--desktop-up) {
+  //   height: 1000px;
+  // }  
+
+  @include grid-media($grid--laptop-up) {
+    padding-bottom: 4rem !important;
+  }  
+
+  @include grid-media($grid--tablet-up) {
+    padding-bottom: 14rem;
+  }
 }
 
 .animation {
@@ -205,27 +241,14 @@ main {
   background:transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;  
   z-index: 1;
   animation:move-twink-back 200s linear infinite;
+
+  @include grid-media($grid--laptop-up) {
+    height: 1000px;
+  }    
 }
 
 
-.support {
-  padding-top: $base-spacing * 4;
 
-  form {
-    // padding: $base-spacing;
-    // border-radius: $base-border-radius;
-    // background: $tuatara;
-    // width: 600px;
-    // margin: 0 auto;
-    // display: flex;
-    // flex-wrap: wrap;
-
-    .input-field {
-      flex: 1 1 100%;
-    }
-  }
-
-}
 
 
 @keyframes move-twink-back {

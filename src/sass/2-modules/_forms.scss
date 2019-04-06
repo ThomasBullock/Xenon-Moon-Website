@@ -9,22 +9,23 @@ form {
   border-radius: $base-border-radius;
   margin-left: auto;
   margin-right: auto;
+  width: 100%;
 
-  @include grid-media($large-desktop-grid) {
+  @include grid-media($grid--desktop-up) {
     width: 600px;
   }  
 
-  @include grid-media($desktop-grid) {
+  @include grid-media($grid--laptop-up) {
     width: 600px;
   }  
 
-  @include grid-media($tablet-grid) {
+  @include grid-media($grid--tablet-up) {
     width: 600px;
   }
 
-  @include grid-media($mobile-grid) {
-    width: 90%;
-  }
+  // @include grid-media($mobile-grid) {
+  //   width: 90%;
+  // }
 }
 
 .input-field {

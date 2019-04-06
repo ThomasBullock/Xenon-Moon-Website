@@ -7,9 +7,9 @@
   cursor: pointer;
   display: inline-block;
   font-family: $base-font-family;
-  font-size: 16px;
+  font-size: 1rem;
   -webkit-font-smoothing: antialiased;
-  font-weight: 600;
+  // font-weight: 600;
   line-height: 1;
   padding: $small-spacing $base-spacing;
   text-align: center;
@@ -34,7 +34,7 @@
     opacity: 0.5;
 
     &:hover {
-      background-color: $action-color;
+      // background-color: $action-color;
     }
   }
 }
