@@ -14,6 +14,7 @@ body {
 
 main {
   background: $jet;
+  position: relative;
   // height: 100vh;
   width: 100%;
 } 
@@ -130,7 +131,7 @@ main {
 
 
   @include elem('intro') {
-    color: $vapor;
+    color: $silver;
     text-align: center;
   }
 
@@ -209,9 +210,11 @@ main {
 }
 
 #return-top {
-  fill: $aqua-blue;
+  fill: $laser-yellow;
+  bottom: -4 * $base-spacing;
+  right: $base-spacing;
   // display: none;
-  opacity: 0;
+  // opacity: 0;
 }
 
 .stars {

@@ -27,6 +27,7 @@
     "bourbon": "^5.1.0",
     "bourbon-neat": "^3.0.1",
     "del": "^2.2.2",
+    "jquery": "^3.4.0",
     "normalize-scss": "^7.0.0",
     "velocity-animate": "^2.0.5"
   }

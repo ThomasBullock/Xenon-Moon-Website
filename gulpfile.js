@@ -18,7 +18,8 @@ gulp.task('clean', function(cb) {
 
 gulp.task("concatScripts", function(){
 		return gulp.src([
-      'node_modules/velocity-animate/velocity.js',
+			'node_modules/jquery/dist/jquery.js',
+			'node_modules/velocity-animate/velocity.js',
 			'src/javascript/main.js'])
 		.pipe(maps.init())
 		.pipe(concat('app.js'))

@@ -89,13 +89,18 @@ $base-timing: ease;
 // Grid
 
 // Breakpoints
-$mobile-screen: 600px;
+$mobile-screen: 600px !default;
 $mobile-screen-up: 601px !default;
-$tablet-screen: 900px;
+$tablet-screen: 900px !default;
 $tablet-screen-up: 993px !default;
-$laptop-screen: 1200px;
+$laptop-screen: 1200px !default;
 $laptop-screen-up: 1201x !default;
 
+
+$grid--mobile: (
+  columns: 12,
+  gutter: 1rem,
+);
 
 $grid--tablet-up: (
   columns: 12,

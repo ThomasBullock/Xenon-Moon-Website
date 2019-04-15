@@ -1,0 +1,39 @@
+.upgrade__page {
+    .row {
+        // @include grid-media($grid--desktop-up) {
+        //     max-width: 1000px;
+        // }
+    }
+}
+
+.upgrade-section {
+    text-align: center;
+    color: $silver;
+
+    h1 {
+        font-size: modular-scale(2);
+        color: $laser-yellow;
+    }
+
+    h3 {
+        margin-top: $base-spacing;
+        margin-bottom: $base-spacing;
+        color: $laser-yellow;
+    }
+
+    h4 {
+
+    }
+
+    @include grid-media($grid--laptop-up) {
+        text-align: left;
+        max-width: 950px;
+        margin: 0 auto;
+    }
+
+    @include grid-media($grid--desktop-up) {
+        max-width: 1000px;
+        margin: 0 auto;
+    }    
+}
+
