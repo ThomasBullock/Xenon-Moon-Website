@@ -3,14 +3,31 @@
 }
 
 .support {
-
-
-    margin-top: $base-spacing * 4;
+    height: calc(100vh - #{$navbar-height-mobile});
+    position: relative;
+    // padding-top: 4rem;
+    // margin-top: $base-spacing * 4;
   
+    @include grid-media($grid--laptop-up) {
+      height: calc(100vh - #{$navbar-height});
+    }  
+
+    > .stars {
+      height: calc(100vh - #{$navbar-height-mobile});
+      padding-top: 4rem;
+
+      @include grid-media($grid--laptop-up) {
+        height: calc(100vh - #{$navbar-height});
+      }      
+    }
+
     form {
+      // margin-top: $base-spacing * 4;
       // padding: $base-spacing;
       // border-radius: $base-border-radius;
-      // background: $tuatara;
+      background: $tuatara;
+      position: relative;
+      z-index: 1000;
       // width: 600px;
       // margin: 0 auto;
       // display: flex;
