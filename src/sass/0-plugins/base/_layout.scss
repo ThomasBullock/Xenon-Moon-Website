@@ -19,5 +19,10 @@ body {
 }
 
 main {
-  padding-top: 5rem;
+  padding-top: $navbar-height-mobile;
+  
+  @include grid-media($grid--laptop-up) {
+    padding-top: $navbar-height;
+  }
+  //5rem;
 }

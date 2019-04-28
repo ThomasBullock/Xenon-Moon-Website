@@ -495,7 +495,10 @@ body {
   position: relative; }
 
 main {
-  padding-top: 5rem; }
+  padding-top: 68px; }
+  @media (min-width: 993px) {
+    main {
+      padding-top: 72px; } }
 
 ul,
 ol {
@@ -898,17 +901,31 @@ main {
   height: 100%; }
 
 .support {
-  margin-top: 4rem; }
-  .support form .input-field {
-    -ms-flex: 1 1 100%;
-        flex: 1 1 100%; }
-  .support form .input-field--name, .support form .input-field--email {
-    -ms-flex: 1 1 100%;
-        flex: 1 1 100%; }
-    @media (min-width: 601px) {
-      .support form .input-field--name, .support form .input-field--email {
-        -ms-flex: 0 1 47.5%;
-            flex: 0 1 47.5%; } }
+  height: calc(100vh - 68px);
+  position: relative; }
+  @media (min-width: 993px) {
+    .support {
+      height: calc(100vh - 72px); } }
+  .support > .stars {
+    height: calc(100vh - 68px);
+    padding-top: 4rem; }
+    @media (min-width: 993px) {
+      .support > .stars {
+        height: calc(100vh - 72px); } }
+  .support form {
+    background: #444444;
+    position: relative;
+    z-index: 1000; }
+    .support form .input-field {
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%; }
+    .support form .input-field--name, .support form .input-field--email {
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%; }
+      @media (min-width: 601px) {
+        .support form .input-field--name, .support form .input-field--email {
+          -ms-flex: 0 1 47.5%;
+              flex: 0 1 47.5%; } }
 
 .upgrade-section {
   text-align: center;

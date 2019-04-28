@@ -119,3 +119,6 @@ $grid--desktop-up: (
   gutter: 1rem,
   media: "(min-width: #{$laptop-screen-up})",
 );
+
+$navbar-height-mobile: 68px;
+$navbar-height: 72px;
